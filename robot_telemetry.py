@@ -3,7 +3,10 @@ def validate(data):
     battery=data.get("battery_pct")
     if not isinstance(battery, int) or isinstance(battery,bool):
         print(f"[ERROR] {robot_id}: battery_pct must be an int, got {battery!r}")
+        return False
     elif battery<0 or battery>100:
         print(f"[ERROR] {robot_id}: battery_pct {battery} out of range (0-100)")
+        return False
     else:
-       print(f"robot {robot_id} is at battery {battery}%") 
+       print(f"robot {robot_id} is at battery {battery}%")
+       return True
