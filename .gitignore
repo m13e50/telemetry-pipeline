@@ -1,0 +1,16 @@
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# security
+.env
+
+# macOS system files
+.DS_Store
+EOL
